@@ -58,11 +58,11 @@ app.get('/layouts-vertical', (req, res) => {
     res.render('form-layouts-vertical');
 });
 
-app.get('/forms-basic-', (req, res) => {
+app.get('/forms-basic-inputs', (req, res) => {
     res.render('forms-basic-inputs');
 });
 
-app.get('/forms-input', (req, res) => {
+app.get('/forms-input-groups', (req, res) => {
     res.render('forms-input-groups');
 });
 
@@ -123,6 +123,10 @@ app.get('/ui-collapse', (req, res) => {
 });
 app.get('/ui-dropdowns', (req, res) => {
     res.render('ui-dropdowns');
+});
+
+app.get('/ui-footer', (req, res) => {
+    res.render('ui-footer');
 });
 app.get('/ui-list-groups', (req, res) => {
     res.render('ui-list-groups');
