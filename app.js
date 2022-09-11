@@ -8,26 +8,25 @@ app.use('/assets',express.static('assets'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-
-app.get('/dashboard/add', (req, res) => {
-    res.send('Formulaire d\'ajout')
-});
-
-app.get('/dashboard/:id', (req, res) => {
-    const id = req.params.id;
-    res.render('dashboard', {dashboardid: id});
-});
-
-app.get('/dashboard', (req, res) => {
-    res.send('Bientôt')
-});
-
 app.get('/forgot-password', (req, res) => {
     res.render('auth-forgot-password-basic');
 });
 
 app.get('/login', (req, res) => {
     res.render('auth-login-basic');
+});
+
+app.get('/commandes', (req, res) => {
+    res.render('commandes');
+});
+
+app.get('/qrcode', (req, res) => {
+    res.render('qrcode');
+});
+
+
+app.get('/menu-management', (req, res) => {
+    res.render('menu-management');
 });
 
 app.get('/register', (req, res) => {
