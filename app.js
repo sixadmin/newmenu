@@ -65,137 +65,97 @@ app.get('/forms-basic-', (req, res) => {
 app.get('/forms-input', (req, res) => {
     res.render('forms-input-groups');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+
+app.get('/icons-boxicons', (req, res) => {
+    res.render('icons-boxicons');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+
+app.get('/layouts-blank', (req, res) => {
+    res.render('layouts-blank');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/layouts-container', (req, res) => {
+    res.render('layouts-container');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/layouts-fluid', (req, res) => {
+    res.render('layouts-fluid');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/layouts-without-menu', (req, res) => {
+    res.render('layouts-without-menu');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/layouts-without-navbar', (req, res) => {
+    res.render('layouts-without-navbar');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/pages-account-settings-account', (req, res) => {
+    res.render('pages-account-settings-account');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/pages-account-settings-connections', (req, res) => {
+    res.render('pages-account-settings-connections');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/pages-account-settings-notifications', (req, res) => {
+    res.render('pages-account-settings-notifications');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/pages-misc-error', (req, res) => {
+    res.render('pages-misc-error');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/pages-misc-under-maintenance', (req, res) => {
+    res.render('pages-misc-under-maintenance');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/tables-basic', (req, res) => {
+    res.render('tables-basic');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-accordion', (req, res) => {
+    res.render('ui-accordion');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-alerts', (req, res) => {
+    res.render('ui-alerts');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-badges', (req, res) => {
+    res.render('ui-badges');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-buttons', (req, res) => {
+    res.render('ui-buttons');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-carousel', (req, res) => {
+    res.render('ui-carousel');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-collapse', (req, res) => {
+    res.render('ui-collapse');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-dropdowns', (req, res) => {
+    res.render('ui-dropdowns');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-list-groups', (req, res) => {
+    res.render('ui-list-groups');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-modals', (req, res) => {
+    res.render('ui-modals');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-navbar', (req, res) => {
+    res.render('ui-navbar');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-offcanvas', (req, res) => {
+    res.render('ui-offcanvas');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-pagination-breadcrumbs', (req, res) => {
+    res.render('ui-pagination-breadcrumbs');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-progress', (req, res) => {
+    res.render('ui-progress');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-spinners', (req, res) => {
+    res.render('ui-spinners');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-tabs-pills', (req, res) => {
+    res.render('ui-tabs-pills');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-toasts', (req, res) => {
+    res.render('ui-toasts');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-tooltips-popovers', (req, res) => {
+    res.render('ui-tooltips-popovers');
 });
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
-});
-app.get('/xxx', (req, res) => {
-    res.render('xxx');
+app.get('/ui-typography', (req, res) => {
+    res.render('ui-typography');
 });
 
 app.get('/', (req, res) => {
