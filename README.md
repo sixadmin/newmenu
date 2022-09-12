@@ -347,7 +347,7 @@ On fait de même avec le footer
 <%- include('partials/footer.ejs') %>
 ```
 
-
+### Comment itérer sur un tableau d'objet
 
 
 

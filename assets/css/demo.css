@@ -8,6 +8,11 @@
   margin-top: 12px;
 }
 
+.space {
+  padding-top: 15px;
+  text-align: left;
+}
+
 .app-brand-logo.demo svg {
   width: 22px;
   height: 38px;
