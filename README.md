@@ -349,6 +349,105 @@ On fait de même avec le footer
 
 ### Comment itérer sur un tableau d'objet
 
+On va déclarer un tableau d'objet dans le fichier app.js (A défaut d'avoir une BDD)
+
+```javascript
+app.get('/commandes', (req, res) => {
+    const commandes = [
+        [3,[
+        { title: 'Le saucisson sec 150g', qty: 3},
+        { title: 'Les onions rings', qty: 2},
+        { title: 'Trio au fromage', qty: 1},
+        { title: 'La Chèvre chaud', qty: 1}]],
+        [7,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Les onions rings', qty: 2},
+            { title: 'Trio au fromage', qty: 1},
+            { title: 'La Chèvre chaud', qty: 1}]],
+        [9,[
+        { title: 'Le saucisson sec 150g', qty: 3},
+        { title: 'Les onions rings', qty: 2},
+        { title: 'Trio au fromage', qty: 1},
+        { title: 'La Chèvre chaud', qty: 1}]],
+        [12,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Les onions rings', qty: 2},
+            { title: 'Trio au fromage', qty: 1},
+            { title: 'Pâté croute', qty: 1},
+            { title: 'La Chèvre chaud', qty: 1}]],
+        [15,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Jupiler', qty: 4},
+            { title: 'Steak frites', qty: 1},
+            { title: 'Tarte au chocolat', qty: 1},
+            { title: 'Café gourmand', qty: 1}]]
+    ]
+    res.render('commandes', { commandes: commandes});
+});
+```
+
+On va récuperer les infos dans notre page commande.ejs
+
+```javascript
+      <div class="row mb-5">
+        <% for(var i = 0; i < commandes.length; i++) { %>
+        <div class="col-md-6 col-lg-4">
+          <div class="card text-end mb-3">
+            <div class="card-body">
+              <div
+                class="card-title d-flex align-items-start justify-content-between"
+              >
+                <div>
+                  <h5 class="card-title">Commande n° <%= commandes[i][0] %></h5>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn p-0"
+                    type="button"
+                    id="cardOpt6"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="cardOpt6"
+                  >
+                    <a class="dropdown-item" href="javascript:void(0);"
+                      >View More</a
+                    >
+                    <a class="dropdown-item" href="javascript:void(0);"
+                      >Delete</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="demo-inline-spacing mt-3">
+                <ul class="list-group">
+                  <% for (j = 0; j < commandes[i][1].length; j++) { %>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                    <%= commandes[i][1][j].title %>
+                      <span class="badge bg-primary"><%= commandes[i][1][j].qty %></span>
+                    </li>
+                    <% } %>
+                </ul>
+              </div>
+              <div class="space">
+                <a href="javascript:void(0)" class="btn btn-primary"
+                  >Prendre en charge</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+```
+
 
 
 

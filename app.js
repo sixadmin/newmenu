@@ -1,7 +1,7 @@
 const express = require('express');
 const app =express();
 
-const PORT = 3000;
+const PORT = 8090;
 
 app.use('/assets',express.static('assets'));
 
@@ -17,7 +17,36 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/commandes', (req, res) => {
-    res.render('commandes');
+    const commandes = [
+        [3,[
+        { title: 'Le saucisson sec 150g', qty: 3},
+        { title: 'Les onions rings', qty: 2},
+        { title: 'Trio au fromage', qty: 1},
+        { title: 'La Chèvre chaud', qty: 1}]],
+        [7,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Les onions rings', qty: 2},
+            { title: 'Trio au fromage', qty: 1},
+            { title: 'La Chèvre chaud', qty: 1}]],
+        [9,[
+        { title: 'Le saucisson sec 150g', qty: 3},
+        { title: 'Les onions rings', qty: 2},
+        { title: 'Trio au fromage', qty: 1},
+        { title: 'La Chèvre chaud', qty: 1}]],
+        [12,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Les onions rings', qty: 2},
+            { title: 'Trio au fromage', qty: 1},
+            { title: 'Pâté croute', qty: 1},
+            { title: 'La Chèvre chaud', qty: 1}]],
+        [15,[
+            { title: 'Le saucisson sec 150g', qty: 3},
+            { title: 'Jupiler', qty: 4},
+            { title: 'Steak frites', qty: 1},
+            { title: 'Tarte au chocolat', qty: 1},
+            { title: 'Café gourmand', qty: 1}]]
+    ]
+    res.render('commandes', { commandes: commandes});
 });
 
 app.get('/qrcode', (req, res) => {
