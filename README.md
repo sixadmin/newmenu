@@ -347,7 +347,7 @@ On fait de même avec le footer
 <%- include('partials/footer.ejs') %>
 ```
 
-### Comment itérer sur un tableau d'objet
+## Comment itérer sur un tableau d'objet
 
 On va déclarer un tableau d'objet dans le fichier app.js (A défaut d'avoir une BDD)
 
@@ -446,6 +446,94 @@ On va récuperer les infos dans notre page commande.ejs
         </div>
         <% } %>
       </div>
+```
+
+## Comment récuperer le body d'une requête ?
+
+Pour cela, on utilise un middleware: body-parser
+
+```bash
+npm install --save body-parser
+```
+
+On l'importe dans notre code
+
+```node
+const bodyParser = require('body-parser')
+```
+
+et
+
+```node
+app.use(bodyParser.urlencode({ extended: false}));
+```
+
+
+On crée un formulaire avec la method POST. Il faut donc gérer cette méthode via express.
+
+On va donc rajouter la ligne suivante dans notre code pour récuperer le contenu de notre formulaire :
+
+```node
+app.post('/commandes', (req,res) => {
+  console.log(req.body);
+  res.sendStatus(201);
+})
+```
+...
+
+## Comment poster un formulaire ?
+
+### Avec Ajax
+
+On rajoute ceci dans notre fichier app.js
+
+```node
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.post('/commandes', urlencodedParser, (req, res) => {
+    if (!req.body) {
+        return res.sendStatus(400);
+    } else {
+        console.log('req.body', req.body);
+        res.send(req.body.categorie);
+    } 
+```
+
+Et dans la page ou se trouve le formulaire :
+
+```node
+	<form action="/commandes" method="post">
+	  <label for="categorie">Nom de la catégorie</label>
+		<input type="text" name="categorie" id="categorie">
+		<button type="submit">ajouter</button>
+	</form>
+```
+
+et en bas de page, on rajoute :
+
+```node
+<script>
+    const form = document.querySelector('form');
+    form.addEventLisyener('submit', addCategorie):
+
+    function addCategorie(event) {
+      event.preventDefault();
+
+      if(fetch){
+          fetch('/commandes',{
+            meth: 'POST',
+            body: new FormData(form)
+          })
+          .then(checkStatus)
+          .catch(function(error) {
+            console.error('request failed', error);
+          })
+      } else {
+        //Jquery, SHR
+      }
+    }
+</script>
 ```
 
 
